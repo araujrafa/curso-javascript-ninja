@@ -68,16 +68,33 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
-function values(arg1, arg2, agr3) {
-  if(arg1 && arg2 && arg3) {
-    return (arg1 + arg2) / arg3; 
-  } else if (!arg1 || !arg2 || !arg3) {
-    if(
-  } else {
-    
-  }
+function testarCaracteres (parametro1, parametro2, parametro3) {
+ if (parametro1 || parametro2 || parametro3) {
+   if (parametro1 && parametro2 && parametro3) {
+     return (parametro1 + parametro2) / parametro3;
+   } else if (parametro1 && !parametro2 && !parametro3) {
+     return parametro1;
+   } else if (!parametro1 && parametro2 && !parametro3) {
+     return parametro2;
+   } else if (!parametro1 && !parametro2 && parametro3) {
+     return parametro3;
+   } else if (parametro1 && parametro2 && !parametro3) {
+     return parametro1 + parametro2;
+   } else if (!parametro1 && parametro2 && parametro3) {
+     return parametro2 + parametro3;
+   } else if (parametro1 && !parametro2 && parametro3) {
+     return parametro1 + parametro3;
+   } else {
+     return null;
+   }
+    } else {
+        return false;
+    }
 }
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
-?
+testarCaracteres(); // false
+testarCaracteres(1); // 1
+testarCaracteres(5,5); // 10
+testarCaracteres(1,1,1); // 2
 ```
