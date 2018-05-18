@@ -14,7 +14,7 @@ function myFunctionArray(arg) {
 /*
 Imprima o segundo índice do array retornado pela função criada acima.
 */
-console.log(myFunctionArray(myArray)[2]);
+console.log(myFunctionArray(myArray)[1]);
 
 /*
 Crie uma função que receba dois parâmetros: o primeiro, um array de valores; e o
@@ -35,9 +35,11 @@ var myArray2 = ['vitoria', true, undefined, false, 30];
 Invoque a função criada acima, fazendo-a retornar todos os valores do último
 array criado.
 */
+myFunctionArray2(myArray2, 0);
 myFunctionArray2(myArray2, 1);
 myFunctionArray2(myArray2, 2);
-
+myFunctionArray2(myArray2, 3);
+myFunctionArray2(myArray2, 4);
 
 /*
 Crie uma função chamada `book`, que recebe um parâmetro, que será o nome do
